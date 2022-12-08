@@ -1,0 +1,80 @@
+/* importo un font esterno */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* variabili */
+:root {
+  --border-sm: 0.9px solid #ccc;
+  --spacing: 10px;
+  --link-color: #468aff;
+  --link-color-hover: #32daff;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  padding-inline-end: calc(var(--spacing) * 1.5);
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-color-hover);
+}
+
+.card {
+  max-width: 300px;
+  border: var(--border-sm);
+  border-radius: 6px;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.card > figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > figure > img {
+  width: 100%;
+  display: block;
+}
+
+.card > figure > figcaption {
+  position: absolute;
+  flex: 1;
+  color: white;
+}
+
+.card > div:first-of-type {
+  padding: calc(var(--spacing) * 1.5);
+  border-bottom: var(--border-sm);
+}
+
+.card > div:first-of-type > h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing);
+}
+
+.card > ul li {
+  padding: var(--spacing);
+  padding-inline: calc(var(--spacing) * 1.5);
+  border-bottom: var(--border-sm);
+}
+.card > div:last-of-type {
+  padding: calc(var(--spacing) * 1.5);
+}
