@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ddd;
+  width: 200px;
+  height: 100vh;
+}
+
+aside > .logo {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px 15px;
+}
+
+aside > ul {
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+aside > ul > li:first-of-type {
+  border-top: 1px solid #ddd;
+}
+
+aside > ul > li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+aside > ul > li:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+aside > ul > li > a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+aside > ul > li:hover > a {
+  color: #2b2bb2;
+}
+
+aside > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+aside > div:last-child > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+aside > div:last-child > img + span {
+  font-size: 14px;
+  font-weight: 600;
+}
