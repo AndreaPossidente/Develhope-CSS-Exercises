@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --grid-cell-width: 86px;
+  --grid-cell-height: 60px;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-display: #424c52;
+  --color-operator: #d2dce4;
+  --color-default-key: #eff2f5;
+  --color-equals: #f77077;
+  --color-gap: #7b92a3;
+
+  --shadow-sm: 1px 1px 5px #00000033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+#calculator > .display {
+  height: 50px;
+  background-color: var(--color-display);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+#calculator > .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, var(--grid-cell-width));
+  grid-template-rows: repeat(5, var(--grid-cell-height));
+  grid-gap: 2px;
+  background-color: var(--color-gap);
+}
+
+#calculator > .grid-container > .key {
+  background-color: var(--color-default-key);
+  color: var(--color-text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator > .grid-container > .operator {
+  background-color: var(--color-operator);
+}
+
+#calculator > .grid-container > .equals {
+  background-color: var(--color-equals);
+  grid-row: span 4;
+}
