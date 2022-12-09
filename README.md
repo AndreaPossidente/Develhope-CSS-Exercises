@@ -6,3 +6,4 @@
 2. [Card](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_4_card)
 3. [Nav](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_6_nav)
 4. [Flexbox](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_2_flexbox)
+5. [Grid](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_3_grid)
