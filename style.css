@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+:root {
+  --color-primary: #15a915;
+  --color-white: #fff;
+  --color-grey: #888;
+  --color-dark: #333;
+
+  --border-light: 1px solid #ddd;
+
+  --padding-sm: 5px;
+  --padding-md: 10px;
+  --padding-lg: 15px;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -9,30 +22,32 @@ html {
   margin: 0;
   padding: 0;
 }
+
+/* Stile Navbar */
+nav {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  padding: 0 var(--padding-lg);
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
 nav a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
-nav a.disabled {
-  color: #888;
+nav a.disabled,
+nav a.disabled:hover {
+  cursor: default;
+  color: var(--color-grey);
 }
 nav a.active {
   font-weight: bold;
 }
 nav a:hover {
-  color: #beffe9;
-}
-
-/* Stile Navbar */
-nav {
-  color: #fff;
-  width: 100%;
-  height: 48px;
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  color: var(--color-primary);
 }
 
 /* Stile Logo */
@@ -54,17 +69,6 @@ nav > #hamburger img {
 
 /* Stile Menu Orizzontale */
 
-/* Toggle da hamburger a menu orizzontale e viceversa */
-@media (max-width: 768px) {
-  nav > ul,
-  nav > form {
-    display: none;
-  }
-  nav > #hamburger {
-    display: block;
-  }
-}
-
 /* Lo so che non era necessario, ma ho fatto funzionare il menu dropdown */
 nav ul {
   list-style-type: none;
@@ -72,7 +76,7 @@ nav ul {
   margin: 0;
 }
 nav ul > li {
-  padding: 15px 6px;
+  padding: var(--padding-lg) var(--padding-sm);
 }
 nav > ul > li {
   display: inline-block;
@@ -87,21 +91,20 @@ nav li > ul {
 }
 nav > ul ul > li {
   cursor: pointer;
-  border-bottom: 1px solid #ddd;
-  padding-left: 15px;
-  padding-right: 15px;
+  border-bottom: var(--border-light);
+  padding: var(--padding-md) var(--padding-lg);
   min-width: 200px;
   transition: all 200ms;
 }
 nav > ul ul > li > a {
   text-decoration: none;
-  color: #000;
+  color: black;
 }
 nav > ul ul > li:hover > a {
-  color: #beffe9;
+  color: var(--color-primary);
 }
 nav > ul ul > li:hover {
-  background-color: #333;
+  background-color: var(--color-dark);
 }
 nav > ul li:hover a + ul,
 nav > ul ul:hover {
@@ -109,8 +112,8 @@ nav > ul ul:hover {
   display: block;
   top: 100%;
   left: 0;
-  border: 1px solid #ddd;
-  background-color: white;
+  border: var(--border-light);
+  background-color: var(--color-white);
 }
 
 /* Stile form */
@@ -121,26 +124,35 @@ nav > form {
 
 /* Stile input di ricerca */
 nav > form > input {
-  border: 1px solid #292929;
+  border: 1px solid var(--color-dark);
   border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 var(--padding-sm);
   height: 32px;
 }
 
 /* Stile pulsante di ricerca */
 nav > form > button {
   background-color: transparent;
-  border: 1px solid #0e7f0e;
-  color: #0e7f0e;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   border-radius: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 var(--padding-md);
   height: 32px;
   transition: all 200ms;
 }
 nav > form > button:hover {
   cursor: pointer;
-  background-color: #0e7f0e;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Toggle da hamburger a menu orizzontale e viceversa */
+@media (max-width: 768px) {
+  nav > ul,
+  nav > form {
+    display: none;
+  }
+  nav > #hamburger {
+    display: block;
+  }
 }
