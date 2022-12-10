@@ -9,3 +9,4 @@
 5. [Grid](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_3_grid)
 6. [Grid Properties](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_7_grid-properties)
 7. [Flexbox Properties](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_8_flexbox-properties)
+8. [Media Queries](https://github.com/AndreaPossidente/Develhope-CSS-Exercises/tree/ex_9_media-queries)
